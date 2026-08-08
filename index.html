@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container-users" class="container">
+    <p id="status-message" class="title-header">«Данные загружаются»</p>
+    <template id="user-template">
+      <div class="user-card">
+        <span class="user-id"></span>
+        <h3 class="user-name"></h3>
+        <p class="user-email"></p>
+        <p class="user-age"></p>
+      </div>
+    </template>
+
+    <div class="control-button">
+      <button class="button" id="delete-one">Удалить одну</button>
+      <button class="button" id="delete-all">Удалить все</button>
+      <button class="button" id="get-all">Получить все</button>
+    </div>
+  </div>
+  <script src="async.js"></script>
+</body>
+
+</html>

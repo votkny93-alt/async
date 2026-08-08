@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Иван",
+      "surname": "Иванов",
+      "email": "ivan.ivanov@example.com",
+      "age": 28
+    },
+    {
+      "id": 2,
+      "name": "Анна",
+      "surname": "Петрова",
+      "email": "anna.petrova@example.com",
+      "age": 24
+    },
+    {
+      "id": 3,
+      "name": "Алексей",
+      "surname": "Смирнов",
+      "email": "alex.smirnov@example.com",
+      "age": 32
+    },
+    {
+      "id": 4,
+      "name": "Мария",
+      "surname": "Кузнецова",
+      "email": "maria.kuznetsova@example.com",
+      "age": 19
+    },
+    {
+      "id": 5,
+      "name": "Дмитрий",
+      "surname": "Попов",
+      "email": "dmitry.popov@example.com",
+      "age": 45
+    }
+  ]
+}
