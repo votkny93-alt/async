@@ -11,19 +11,19 @@ let currentUsers = [];
 const data = localStorage.getItem('users');
 
 // 1. загрузка старта страницы
-if (data) { 
-    currentUsers = JSON.parse(data).users; 
-    
-    if (currentUsers && currentUsers.length === 0) {
-        statusMessage.textContent = "Список пользователей пуст. Нажмите 'Получить все' для загрузки."; 
-        statusMessage.style.color = "gray";
-        renderUsers([]);
-    } else {
-        statusMessage.textContent = ""; 
-        renderUsers(currentUsers); 
-    }
-} else { 
-    loadDataFromServer(true); 
+if (data) {
+  currentUsers = JSON.parse(data).users;
+
+  if (currentUsers && currentUsers.length === 0) {
+    statusMessage.textContent = "Список пользователей пуст. Нажмите 'Получить все' для загрузки.";
+    statusMessage.style.color = "gray";
+    renderUsers([]);
+  } else {
+    statusMessage.textContent = "";
+    renderUsers(currentUsers);
+  }
+} else {
+  loadDataFromServer(true);
 }
 
 // 2. показ карточек
@@ -87,20 +87,7 @@ deleteAll.addEventListener('click', () => {
 getAll.addEventListener('click', () => {
   const currentCardsCount = document.querySelectorAll('.user-card').length;
 
-  fetch('./json.json')
-    .then(response => response.json())
-    .then(users => {
-      if (users.users.length > 0 && currentCardsCount === users.users.length) {
-        statusMessage.textContent = "Все пользователи уже отображены на странице";
-        statusMessage.style.color = "orange";
-        return;
-      }
-      loadDataFromServer(false);
-    })
-    .catch(error => {
-      statusMessage.textContent = "Не удалось восстановить данные: " + error.message;
-      statusMessage.style.color = "red";
-    });
+  loadDataFromServer(false);
 });
 
 // 6. кнопка удалить одного
