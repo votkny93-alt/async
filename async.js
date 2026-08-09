@@ -7,6 +7,7 @@ const title = document.querySelector(".title-header");
 const container = document.querySelector(".container");
 const template = document.getElementById('user-template');
 
+
 let currentUsers = [];
 const data = localStorage.getItem('users');
 if (data) {
